@@ -16,7 +16,7 @@ class UserSeeder extends Seeder
         $timetamp = \Carbon\Carbon::now()->toDateTimeString();
 
         DB::table('users')->insert([
-            'username' => 'joni',
+            'username' => 'desales',
             'password' => 'password',
             'created_at' => $timetamp,
             'updated_at' => $timetamp
