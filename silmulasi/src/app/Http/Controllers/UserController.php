@@ -20,6 +20,20 @@ class UserController extends Controller
         return response()->json($query, 200);
     }
 
+    public function get_user_token(Request $request, $id) {
+        $user = User::where('id', $id)->get();
+
+        if($user) {
+            $res['success']='true';
+            $res['message']=$user;
+            return response()->json($res);
+        } else {
+            $res['success']='false';
+            $res['message']='Cannot Find User';
+            return response()->json($res);
+        }
+    }
+
     /**
      * Show the form for creating a new resource.
      *
