@@ -24,3 +24,11 @@ $router->get('/', function () use ($router) {
 $router->group(['prefix' => 'api/v1/user', 'middleware' => 'auth'],function () use ($router) {
     $router->get('/',['uses' => 'UserController@index']);
 });
+
+$router->group(['prefix' => 'api/v1/product', 'middleware' => 'auth'],function () use ($router) {
+    $router->get('/',['uses' => 'ProductController@index']);
+    $router->post('/', ['uses' => 'ProductController@store']);
+    $router->delete('/{id}', ['uses' => 'ProductController@destroy']);
+    $router->get('/{id}', ['uses' => 'ProductController@show']);
+    $router->put('/{id}', ['uses' => 'ProductController@edit']);
+});
