@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
 
         DB::table('users')->insert([
             'username' => 'desales',
-            'password' => 'password',
+            'password' => 'desales1',
             'created_at' => $timetamp,
             'updated_at' => $timetamp
         ]);

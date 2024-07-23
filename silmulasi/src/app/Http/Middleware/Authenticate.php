@@ -37,16 +37,16 @@ class Authenticate
 public function handle($request, Closure $next, $guard = null)
     {
         if ($this->auth->guard($guard)->guest()) {
-            if($request->header('token')) {
-                $token = $request->header('token');
-                if ($token) {
-                    $check_token = DB::connection('mysql')
+            if($request->header('desales1')) {
+                $desales1 = $request->header('desales1');
+                if ($desales1) {
+                    $check_desales1 = DB::connection('mysql')
                         ->table('users')
-                        ->where('password', $token)
+                        ->where('password', $desales1)
                         ->first();
-                        // echo($check_token);
+                        // echo($check_desales1);
 
-                    if ($check_token === null) {
+                    if ($check_desales1 === null) {
                         $res['success'] = false;
                         $res['message'] = 'Permission Not Allowed';
                         return response()->json($res, 403);
