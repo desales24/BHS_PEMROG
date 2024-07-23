@@ -1,0 +1,15 @@
+# Penjelasan function
+
+    Fungsi (function) dalam pemrograman adalah blok kode yang dirancang untuk melakukan tugas tertentu. Fungsi dapat menerima input berupa parameter dan mengembalikan output setelah melakukan operasi tertentu. Penggunaan fungsi membuat kode lebih terorganisir, modular, dapat digunakan kembali, dan lebih mudah dipahami. Komponen utama fungsi meliputi deklarasi fungsi, yang menentukan nama fungsi dan parameter yang diterima; badan fungsi, yang berisi pernyataan yang menentukan apa yang dilakukan fungsi; dan pemanggilan fungsi, yang merupakan cara menjalankan fungsi di dalam program dengan menyebut nama fungsi dan memberikan nilai-nilai yang diperlukan untuk parameter.
+
+Sebagai contoh, berikut adalah fungsi sederhana dalam Python yang menambahkan dua angka:
+
+```python
+def tambah(a, b):
+    return a + b
+```
+
+    Pemanggilan fungsi ini dengan `tambah(3, 5)` akan menghasilkan nilai `8`, yang kemudian dapat dicetak ke layar. Penggunaan fungsi menawarkan banyak keuntungan, seperti modularitas, di mana fungsi membagi program menjadi bagian-bagian kecil yang dapat dikelola dan dipahami secara terpisah; penggunaan kembali, di mana fungsi yang telah didefinisikan dapat dipanggil berkali-kali di berbagai tempat dalam program, menghindari duplikasi kode; keterbacaan, di mana fungsi memberikan struktur pada kode, membuatnya lebih mudah dibaca dan dipahami; serta pemeliharaan, di mana mengubah logika di dalam fungsi cukup dilakukan sekali di dalam badan fungsi, tanpa perlu mencari dan mengubah setiap pemanggilan fungsi tersebut di seluruh program.
+
+# Penjelasan Rekrudif
+    Rekursi adalah teknik dalam pemrograman di mana sebuah fungsi memanggil dirinya sendiri untuk menyelesaikan suatu masalah. Dalam pendekatan rekursif, masalah besar dipecah menjadi masalah-masalah yang lebih kecil dan serupa, yang kemudian dipecahkan dengan memanggil fungsi yang sama secara berulang. Fungsi rekursif biasanya terdiri dari dua komponen utama: base case dan rekurens. Base case adalah kondisi yang menghentikan rekursi, mencegah pemanggilan fungsi tanpa akhir dan memastikan fungsi memberikan hasil akhir. Rekurens adalah bagian di mana fungsi memanggil dirinya sendiri dengan parameter yang diubah, mendekati base case. Contoh sederhana dari rekursi adalah fungsi untuk menghitung faktorial sebuah bilangan. Misalnya, faktorial dari 5 dapat dihitung dengan cara 5 * faktorial(4), di mana faktorial(4) akan memanggil faktorial(3), dan seterusnya, hingga mencapai base case faktorial(1) yang mengembalikan nilai 1. Melalui proses ini, setiap pemanggilan fungsi mengembalikan hasil yang dikalikan dengan nilai sebelumnya, hingga menghasilkan nilai faktorial yang diinginkan. Rekursi mempermudah penulisan dan pemahaman solusi untuk masalah yang secara alami dapat dipecah menjadi submasalah yang serupa, meskipun perlu diperhatikan potensi penggunaan memori dan waktu eksekusi yang lebih besar dibandingkan dengan solusi iteratif.
