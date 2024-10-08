@@ -146,3 +146,9 @@ Berikut adalah langkah-langkah lengkap untuk mempersiapkan lingkungan pemrograma
       ```
 
 Langkah-langkah di atas akan membantu Anda dalam menyiapkan lingkungan pemrograman yang kuat dan efisien di sistem Windows menggunakan WSL, Zsh, dan GitHub.
+
+# Cara Hapus zone Identyfier
+Di dalam terminal ketikkan
+```
+ find . -type f -name '*:Zone.Identifier*' -exec rm -f {} \;
+ ```
